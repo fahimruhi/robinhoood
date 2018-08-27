@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, StyleSheet, Text, View, Button,ScrollView, Alert, } from 'react-native';
+import { StyleSheet, Text, View, Button,ScrollView, Alert,AppRegistry } from 'react-native';
 
 export default class HelloWorldApp extends Component {
   render() {
     return (
       <View>
         <ScrollView style={styles.first}/>
-        <ScrollView style={styles.second}>
-        <View style={{flexDirection: 'row',borderWidth: 1}}>
-        <Button style={styles.submit}  title='HOME' />
-        <Button title='SEARCH' />
+
+        <View style={styles.second}>
+        <View style={{flexDirection: 'row'}}>
+        <View style={[{ width: "20%", margin: 0, padding: 2, backgroundColor: "white" }]}>
+          <Button onPress={this.buttonClickListener} title="ABOUT" color="steelblue"/>
         </View>
-        </ScrollView>
-        <ScrollView style={styles.third}/>  
+        <View style={[{ width: "20%", margin: 0, padding: 2, backgroundColor: "white" }]}>
+          <Button onPress={() => {}} title='HOME' color="steelblue" />
+        </View>
+        <View style={[{ width: "25%", margin: 0, padding: 2, backgroundColor: "white" }]}>
+          <Button onPress={() => {}} title='SEARCH' color="steelblue" />
+        </View>
+        <View style={[{ width: "38%", margin: 0, padding: 2, backgroundColor: "white" }]}>
+          <Button onPress={() => {}} title='NOTIFICATION' color="steelblue" />
+        </View>
+        
+        </View> 
+
+        </View>
+
+        <ScrollView style={styles.third}/>
+
       </View>
 
     );
@@ -27,7 +42,7 @@ const styles = StyleSheet.create({
   },
   second: {
     width: 360,
-    height: 60,
+    height: 36,
     backgroundColor: 'steelblue',
 
   },
@@ -37,14 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'skyblue',
   },
   submit:{
-    marginRight:40,
-    marginLeft:40,
-    marginTop:10,
-    paddingTop:20,
-    paddingBottom:20,
-    backgroundColor:'green',
-    borderRadius:10,
-    borderWidth: 1,
-    borderColor: 'green'
+    borderColor:'white',
 },
+
 });
